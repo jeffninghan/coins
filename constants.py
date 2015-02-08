@@ -21,7 +21,40 @@ Q_RATIOS = { 'p': 0.79,
              'd': 0.74 }
 
 # Resolution for coin coloring in (pixels)
-RES = 4
+SMOOTHING_RESOLUTION = 4
+
+# Minimum coin diameter
+MIN_COIN_DIAMETER = 10
+
+# Window for color determination (pixels used to vote with)
+COLOR_WINDOW = 3
 
 # Threshold for coloring picture area white or black
-THRESHOLD = 75
+THRESHOLD = 50
+
+IMG_FILE ='img/penny_nickel_dime_quarter.jpg' #'img/test_circles.jpg' #
+
+WHITE_RGB = (255, 255, 255)
+BLACK_RGB = (0, 0, 0)
+RED_RGB = (255, 0, 0)
+GREEN_RGB = (0, 255, 0)
+
+HLS_SCALE = 240
+WHITE_RGB_THRESHOLD = (10, 10, 10)
+BLACK_RGB_THRESHOLD = (10, 10, 10)
+
+# hue should be within 24 of this; l, s can be anything
+PENNY_HLS = (12, 100, 100)
+PENNY_HLS_THRESHOLD = (12, HLS_SCALE, HLS_SCALE)
+
+# saturation should be below 50, luminescence should be below 160
+SILVER_HLS = (45, 80, 25)
+SILVER_HLS_THRESHOLD = (HLS_SCALE, 80, 25)
+
+# luminscence needs to be above 160; h, s can be anything
+WHITE_HLS = (160, 240, 0)
+WHITE_HLS_THRESHOLD = (HLS_SCALE, 40, HLS_SCALE)
+
+BLACK_HLS = (160, 0, 0)
+RED_HLS = (0, 120, 240)
+GREEN_HLS = (80, 120, 240)
