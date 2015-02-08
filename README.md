@@ -19,9 +19,13 @@ This class describes an imported coin image. This class does the following:
 2) Goes through image and colors non-penny coins black, pennies red and background white.
 
 
-CoinCategorize
+CoinFind
 This class provides all the functionality to determine what coins are in an image. There are two steps for this:
 1) Determine the radius and center of each circle in the image.
-2) Also distinguishes pennies from other coins based on the color
-3) Determines how many of each coin exists on the image
-4) Returns the total value of the coins.
+2) Remove duplicate centers that may appear in the same coin
+
+CoinCategorize
+This class is responsible for determining what the coin types are and returns total value of coins
+1) Distinguishes pennies from other coins based on the color
+2) Determines how many of each coin exists on the image
+3) Returns the total value of the coins.
